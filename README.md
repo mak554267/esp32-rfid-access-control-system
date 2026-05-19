@@ -273,6 +273,8 @@ When an RFID card is scanned, the system will:
 - 💾 Log saved to SD card
 - 🌐 Web dashboard updates in real time
 ---
+## Final Working System
+---
 ## 📷 OLED Features
 
 - Access Granted / Denied screen
