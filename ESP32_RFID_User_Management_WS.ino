@@ -36,8 +36,8 @@ MFRC522DriverSPI driver{ss_pin}; // Create SPI driver
 MFRC522 mfrc522{driver};         // Create MFRC522 instance
 
 // Replace with your network credentials
-const char* ssid = "CYSEC";
-const char* password = "0055@5555";
+const char* ssid     = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 long timezone = 0;
 byte daysavetime = 1;
