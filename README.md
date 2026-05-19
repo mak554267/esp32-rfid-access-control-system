@@ -274,6 +274,7 @@ When an RFID card is scanned, the system will:
 - 🌐 Web dashboard updates in real time
 ---
 ## Final Working System
+![Hardware](Full Working Sytem.jpeg)
 ---
 ## 📷 OLED Features
 
