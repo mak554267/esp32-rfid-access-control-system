@@ -91,7 +91,188 @@
 | SCL | GPIO 22 |
 
 ---
+# 🚀 How To Run The Project
 
+---
+
+## Step 1 — Install Arduino IDE
+
+Download and install:
+
+🔗 https://www.arduino.cc/en/software
+
+---
+
+## Step 2 — Install ESP32 Board Package
+
+Open Arduino IDE:
+
+```
+File → Preferences
+```
+
+Add this URL in the **Additional Boards Manager URLs** field:
+
+```
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+```
+
+Then navigate to:
+
+```
+Tools → Board → Boards Manager
+```
+
+Search for:
+
+```
+ESP32
+```
+
+Install:
+
+```
+ESP32 by Espressif Systems (Version 2.0.17)
+```
+
+---
+
+## Step 3 — Install Required Libraries
+
+Go to:
+
+```
+Sketch → Include Library → Manage Libraries
+```
+
+Install all required libraries listed in the README.
+
+---
+
+## Step 4 — Install LittleFS Plugin
+
+Download the plugin:
+
+🔗 https://github.com/lorol/arduino-esp32littlefs-plugin/releases
+
+Extract it inside:
+
+```
+Documents/Arduino/tools/
+```
+
+Restart Arduino IDE.
+
+---
+
+## Step 5 — Open Project
+
+Open the main sketch file:
+
+```
+ESP32_RFID_User_Management_WS.ino
+```
+
+---
+
+## Step 6 — Configure WiFi
+
+Inside the code, replace the placeholder credentials:
+
+```cpp
+const char* ssid     = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
+```
+
+with your actual WiFi credentials.
+
+---
+
+## Step 7 — Select Board & Port
+
+Select the board in Arduino IDE:
+
+```
+Tools → Board → ESP32 Dev Module
+```
+
+Select your COM port:
+
+```
+Tools → Port → (your COM port)
+```
+
+---
+
+## Step 8 — Upload The Code
+
+Click the **Upload** button.
+
+> ⚠️ **If upload fails:** Disconnect the SD card module temporarily and try uploading again.
+
+---
+
+## Step 9 — Upload LittleFS Files
+
+Inside the project folder, create a directory:
+
+```
+data/
+```
+
+Place all web files (HTML, CSS, JS) inside it.
+
+Then upload via:
+
+```
+Tools → ESP32 LittleFS Data Upload
+```
+
+---
+
+## Step 10 — Open Serial Monitor
+
+Set baud rate to:
+
+```
+115200
+```
+
+You should see output like:
+
+```
+WiFi Connected
+ESP IP Address: xxx.xxx.xxx.xxx
+```
+
+---
+
+## Step 11 — Open Web Dashboard
+
+Open your browser and visit:
+
+```
+http://ESP32_IP_ADDRESS
+```
+
+Example:
+
+```
+http://192.168.1.100
+```
+
+---
+
+## Step 12 — Scan RFID Card
+
+When an RFID card is scanned, the system will:
+
+- 📟 OLED updates with user status
+- 💡 LED blinks
+- 🔔 Buzzer beeps
+- 💾 Log saved to SD card
+- 🌐 Web dashboard updates in real time
+---
 ## 📷 OLED Features
 
 - Access Granted / Denied screen
